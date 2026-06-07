@@ -21,6 +21,9 @@ export default function Home() {
       <p className="text-2xl animate-up delay-3 text-stone-950 font-bold italic rounded-lg p-3 text-center bg-white text-bold mb-8 w-100">
         Marketing of ranchum
       </p>
+      <p className="text-2xl animate-up delay-3 text-stone-950 font-bold italic rounded-lg p-3 text-center bg-white text-bold mb-8 w-100">
+        เอนก เหรียญปรีชา
+      </p>
       
       {/* 2 ปุ่ม */}
       <div className="flex gap-4 mt-6 animate-up delay-4">

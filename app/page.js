@@ -1,41 +1,57 @@
-import Image from "next/image";
-export default function Home() {
-  return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-600 to-olive-950">
-      
-      <Image
-        className="aspect-square animate-up delay-1 rounded-full object-cove"
-        src="/img/a.jpg"
-        alt=""
-        width={200}
-        height={200}
-      />
-      <div className="text-8xl mb-6">{/* emoji */}</div>
-      
-      {/* ชื่อ */}
-      <h1 className="text-7xl animate-up delay-2 font-bold text-white mb-4 text-shadow-md text-shadow-mist-50">
-        Anek rienpreecha ✨
-      </h1>
-      
-      {/* Tagline */}
-      <p className="text-2xl animate-up delay-3 text-stone-950 font-bold italic rounded-lg p-3 text-center bg-white text-bold mb-8 w-100">
-        Marketing of ranchum
-      </p>
-      <p className="text-2xl animate-up delay-3 text-stone-950 font-bold italic rounded-lg p-3 text-center bg-white text-bold mb-8 w-100">
-        เอนก เหรียญปรีชา
-      </p>
-      
-      {/* 2 ปุ่ม */}
-      <div className="flex gap-4 mt-6 animate-up delay-4">
-        <button className="px-6 py-3  bg-white text-stone-950 font-semibold rounded-md shadow-lg hover:scale-105 transition">
-            Projects
-        </button>
 
-        <button className="px-6 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-stone-950 transition">
-            Contact
-        </button>
-      </div>
-      
-    </main>
+import Skill from "./components/skill";
+import Project from "./components/project";
+import Hero from "./components/hero";
+import About from "./components/about";
+     function Greeting({ name }){
+        return <h1> hello {name} </h1>
+      }
+     function Greetin({ namee }){
+        return <h1> {namee} </h1>
+      }
+function Section({ title, children }) {
+  return (
+    <section className="py-20 px-8">
+      <h2 className="text-4xl font-bold mb-8">{title}</h2>
+      {children}
+    </section>
   );
+}
+
+function Container({ children }) {
+  return (
+    <div className="bb p-3 flex flex-col items-center justify-center rounded-xl">
+      {children}
+    </div>
+  );
+}
+
+export default function home() {
+
+    return(
+
+        <main className="min-h-screen gap-4 flex flex-col items-center justify-center bg-gradient-to-b from-blue-600 to-olive-950 p-8">
+            
+            <Container className="bb p-0 ">
+            <Hero />
+            </Container>
+            <Container className="bb p-0">
+            <About />
+            </Container>
+            <div className="text-8xl">
+                <h1 className="text-5xl font-stretch-extra-condensed text-center italic font-bold mt-5" >SKILL</h1>
+                <hr></hr>
+            <Skill />
+            </div>
+            <div className="text-8xl">
+                <h1 className="text-5xl font-stretch-extra-condensed text-center italic font-bold mt-5" >Project</h1>
+                <hr></hr>
+            <Project />
+            </div>
+
+
+        </main>
+
+
+    )
 }

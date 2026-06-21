@@ -45,3 +45,10 @@ body {
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
 
+
+
+.bb {
+  background-color: rgba(0,0,0,0.5);
+  
+  width: 75vw; 
+}

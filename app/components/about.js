@@ -2,7 +2,7 @@
 export default function About() {
 
   return (
-<div className="flex text-8xl flex items-center justify-center gap-8" >
+<div className="flex text-8xl flex items-center justify-center gap-8 p-3" >
 
                   <div className="">
                   
